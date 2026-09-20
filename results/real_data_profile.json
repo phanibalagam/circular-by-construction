@@ -1,0 +1,54 @@
+{
+  "secom": {
+    "source": "UCI ML Repository, SECOM, id 179",
+    "n_runs": 1567,
+    "n_signals_raw": 590,
+    "n_fail": 104,
+    "n_pass": 1463,
+    "fail_rate": 0.06636885768985322,
+    "time_start": "2008-07-19 11:55:00",
+    "time_end": "2008-10-17 06:07:00",
+    "span_days": 89,
+    "missing": {
+      "cell_fraction": 0.04537548808583821,
+      "max_column_fraction": 0.9119336311423102,
+      "cols_complete": 52,
+      "cols_over_50pct_missing": 28,
+      "mean_missing_per_row": 26.771537970644545,
+      "max_missing_per_row": 152
+    },
+    "quality_problems": {
+      "constant_columns": 116,
+      "duplicate_rows": 0,
+      "scale_min": -14804.5,
+      "scale_max": 37943.0
+    },
+    "analysis_matrix": {
+      "rule": "drop constant columns and columns with >50% missing; median-impute; drop zero-variance",
+      "n_signals": 446,
+      "n_runs": 1567,
+      "path": "data/interim/secom_X.csv.gz"
+    }
+  },
+  "_env": {
+    "python": "3.11.15",
+    "platform": "Linux-6.18.44-fc-v24-x86_64-with-glibc2.39",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "pandas": "3.0.2",
+    "scikit_learn": "1.8.0",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "_script": "01_profile_real_data.py"
+}

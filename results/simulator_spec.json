@@ -1,0 +1,279 @@
+{
+  "n_batches": 2000,
+  "master_seed": 20260907,
+  "params": {
+    "mu_max": {
+      "value": 0.092,
+      "unit": "1/h",
+      "cv": 0.08,
+      "src": "fed-batch penicillin, Bajpai-Reuss family"
+    },
+    "Ks": {
+      "value": 0.15,
+      "unit": "g/L",
+      "cv": 0.1,
+      "src": "Monod half-saturation, substrate"
+    },
+    "Ko": {
+      "value": 0.02,
+      "unit": "mmol/L",
+      "cv": 0.1,
+      "src": "Monod half-saturation, dissolved oxygen"
+    },
+    "Yxs": {
+      "value": 0.45,
+      "unit": "g/g",
+      "cv": 0.06,
+      "src": "biomass yield on substrate"
+    },
+    "Yps": {
+      "value": 0.9,
+      "unit": "g/g",
+      "cv": 0.08,
+      "src": "product yield on substrate"
+    },
+    "qp_max": {
+      "value": 0.0062,
+      "unit": "g/g/h",
+      "cv": 0.1,
+      "src": "specific production rate"
+    },
+    "Kp": {
+      "value": 0.0002,
+      "unit": "g/L",
+      "cv": 0.12,
+      "src": "production half-saturation (substrate)"
+    },
+    "Ki_p": {
+      "value": 8.0,
+      "unit": "g/L",
+      "cv": 0.12,
+      "src": "substrate inhibition of production"
+    },
+    "Kd": {
+      "value": 0.012,
+      "unit": "1/h",
+      "cv": 0.1,
+      "src": "biomass decay"
+    },
+    "m_s": {
+      "value": 0.014,
+      "unit": "g/g/h",
+      "cv": 0.1,
+      "src": "maintenance coefficient"
+    },
+    "K_hyd": {
+      "value": 0.0035,
+      "unit": "1/h",
+      "cv": 0.12,
+      "src": "product hydrolysis / degradation"
+    },
+    "kLa": {
+      "value": 85.0,
+      "unit": "1/h",
+      "cv": 0.12,
+      "src": "oxygen transfer, large-scale stirred tank"
+    },
+    "DO_star": {
+      "value": 0.25,
+      "unit": "mmol/L",
+      "cv": 0.03,
+      "src": "saturation DO at operating T, P"
+    },
+    "Sf": {
+      "value": 420.0,
+      "unit": "g/L",
+      "cv": 0.05,
+      "src": "feed substrate concentration"
+    },
+    "V0": {
+      "value": 58000.0,
+      "unit": "L",
+      "cv": 0.02,
+      "src": "initial working volume, industrial scale"
+    },
+    "X0": {
+      "value": 0.12,
+      "unit": "g/L",
+      "cv": 0.2,
+      "src": "inoculum density (seed-train variability)"
+    },
+    "S0": {
+      "value": 18.0,
+      "unit": "g/L",
+      "cv": 0.08,
+      "src": "initial substrate"
+    }
+  },
+  "setpoints": {
+    "pH": 6.5,
+    "T": 298.15,
+    "DO_frac": 0.3
+  },
+  "duration_h": 230.0,
+  "integration_step_h": 0.25,
+  "sample_interval_h": 2.0,
+  "phases": [
+    {
+      "name": "lag",
+      "start_h": 0.0,
+      "end_h": 12.0
+    },
+    {
+      "name": "growth",
+      "start_h": 12.0,
+      "end_h": 45.0
+    },
+    {
+      "name": "production",
+      "start_h": 45.0,
+      "end_h": 200.0
+    },
+    {
+      "name": "harvest",
+      "start_h": 200.0,
+      "end_h": 230.0
+    }
+  ],
+  "cqa_spec": {
+    "titer_g_L": {
+      "lo": 3.7465179175532013,
+      "hi": null,
+      "side": "lo",
+      "unit": "g/L",
+      "observable": true
+    },
+    "purity_pct": {
+      "lo": 98.24088671821514,
+      "hi": null,
+      "side": "lo",
+      "unit": "%",
+      "observable": true
+    },
+    "degradant_pct": {
+      "lo": null,
+      "hi": 1.0247841572231828,
+      "side": "hi",
+      "unit": "%",
+      "observable": true
+    },
+    "endotoxin_EU_mL": {
+      "lo": null,
+      "hi": 1.2835552502701881,
+      "side": "hi",
+      "unit": "EU/mL",
+      "observable": true
+    },
+    "bioburden_CFU_mL": {
+      "lo": null,
+      "hi": 1.8843993781067632,
+      "side": "hi",
+      "unit": "CFU/mL",
+      "observable": true
+    },
+    "particulates_ct": {
+      "lo": null,
+      "hi": 3801.8614982640174,
+      "side": "hi",
+      "unit": "count",
+      "observable": false
+    },
+    "water_pct": {
+      "lo": null,
+      "hi": 0.6811084474909228,
+      "side": "hi",
+      "unit": "%",
+      "observable": false
+    },
+    "ccit_leak": {
+      "lo": null,
+      "hi": 0.5,
+      "side": "hi",
+      "unit": "binary",
+      "observable": false
+    },
+    "_calibration": {
+      "n_nominal_batches": 500,
+      "tail_percentile": 0.27
+    }
+  },
+  "process_modes": {
+    "sterility_microbial": {
+      "observable": true
+    },
+    "potency_assay": {
+      "observable": true
+    },
+    "impurity_degradant": {
+      "observable": true
+    },
+    "cgmp_process_deviation": {
+      "observable": true
+    },
+    "cross_contamination_foreign": {
+      "observable": false
+    },
+    "container_closure": {
+      "observable": false
+    }
+  },
+  "excluded_openfda_modes": {
+    "labeling_mixup": "packaging/labelling error, not a bioreactor process failure",
+    "unapproved_undeclared": "regulatory/marketing status, not a process failure",
+    "stability_shelf_life": "manifests post-release over shelf life, not at release",
+    "dissolution_physical": "downstream solid-dose attribute, out of scope for this fed-batch model",
+    "unclassified": "reason text not matched by the rule set"
+  },
+  "mode_prior_renormalised": {
+    "sterility_microbial": 0.548972730668659,
+    "potency_assay": 0.0766529697422488,
+    "impurity_degradant": 0.09286514755323125,
+    "cgmp_process_deviation": 0.1571161748225626,
+    "cross_contamination_foreign": 0.1075831154277176,
+    "container_closure": 0.016809861785580877
+  },
+  "nominal_failure_rate_assumed": 0.0664,
+  "nominal_failure_rate_note": "Set to SECOM's observed fail rate so the two corpora are comparable in class balance. It is NOT estimated from the recall corpus: recalls count market escapes, not batch rejections.",
+  "realised": {
+    "n_injected_failures": 131,
+    "n_rejected_by_spec": 147,
+    "reject_rate": 0.0735,
+    "n_trajectory_observable_failures": 121,
+    "n_trajectory_unobservable_failures": 10,
+    "mode_counts": {
+      "none": 1869,
+      "sterility_microbial": 82,
+      "cgmp_process_deviation": 21,
+      "impurity_degradant": 12,
+      "cross_contamination_foreign": 8,
+      "potency_assay": 6,
+      "container_closure": 2
+    }
+  },
+  "n_record_features": 136,
+  "outputs": [
+    "data/interim/sim_batch_records.csv.gz",
+    "data/interim/sim_trajectories.npz"
+  ],
+  "_env": {
+    "python": "3.11.15",
+    "platform": "Linux-6.18.44-fc-v24-x86_64-with-glibc2.39",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "pandas": "3.0.2",
+    "scikit_learn": "1.8.0",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "_script": "02_simulator.py"
+}

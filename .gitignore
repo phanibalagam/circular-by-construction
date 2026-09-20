@@ -1,0 +1,13 @@
+data/
+notes/
+selfcheck/
+Review/
+Review - Response/
+VENUE.md
+REVIEW-FINDINGS.md
+CITATIONS-UNVERIFIED.md
+*.aux
+*.log
+*.out
+__pycache__/
+*.pyc

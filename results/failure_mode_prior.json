@@ -1,0 +1,122 @@
+{
+  "source": "openFDA drug/enforcement",
+  "export_last_updated": "2026-08-27",
+  "n_records_total": 17899,
+  "n_drug_records_classified": 17898,
+  "rule_coverage": 0.9218907140462621,
+  "n_unclassified": 1398,
+  "severity_mix_overall": {
+    "Class II": 0.807352776846575,
+    "Class I": 0.09716169404402726,
+    "Class III": 0.0954855291093977
+  },
+  "mode_frequency": {
+    "sterility_microbial": 0.41054866465526874,
+    "cgmp_process_deviation": 0.11749916191753268,
+    "labeling_mixup": 0.08509330651469438,
+    "cross_contamination_foreign": 0.08045591686221924,
+    "unclassified": 0.07810928595373785,
+    "impurity_degradant": 0.06944910045815175,
+    "potency_assay": 0.05732484076433121,
+    "stability_shelf_life": 0.03397027600849257,
+    "unapproved_undeclared": 0.032126494580400046,
+    "dissolution_physical": 0.022851715275449772,
+    "container_closure": 0.012571237009721757
+  },
+  "mode_counts": {
+    "sterility_microbial": 7348,
+    "cgmp_process_deviation": 2103,
+    "labeling_mixup": 1523,
+    "cross_contamination_foreign": 1440,
+    "unclassified": 1398,
+    "impurity_degradant": 1243,
+    "potency_assay": 1026,
+    "stability_shelf_life": 608,
+    "unapproved_undeclared": 575,
+    "dissolution_physical": 409,
+    "container_closure": 225
+  },
+  "severity_given_mode": {
+    "cgmp_process_deviation": {
+      "Class I": 0.00047551117451260106,
+      "Class II": 0.9805040418449834,
+      "Class III": 0.019020446980504042
+    },
+    "container_closure": {
+      "Class I": 0.06666666666666667,
+      "Class II": 0.6977777777777778,
+      "Class III": 0.23555555555555555
+    },
+    "cross_contamination_foreign": {
+      "Class I": 0.12986111111111112,
+      "Class II": 0.8166666666666667,
+      "Class III": 0.05347222222222222
+    },
+    "dissolution_physical": {
+      "Class I": 0.022004889975550123,
+      "Class II": 0.6821515892420538,
+      "Class III": 0.29584352078239606
+    },
+    "impurity_degradant": {
+      "Class I": 0.0016090104585679806,
+      "Class II": 0.6958970233306516,
+      "Class III": 0.3024939662107804
+    },
+    "labeling_mixup": {
+      "Class I": 0.08010505581089954,
+      "Class II": 0.7229152987524623,
+      "Class III": 0.1969796454366382
+    },
+    "potency_assay": {
+      "Class I": 0.08284600389863547,
+      "Class II": 0.5682261208576999,
+      "Class III": 0.3489278752436647
+    },
+    "stability_shelf_life": {
+      "Class I": 0.003289473684210526,
+      "Class II": 0.6957236842105263,
+      "Class III": 0.30098684210526316
+    },
+    "sterility_microbial": {
+      "Class I": 0.10356559608056615,
+      "Class II": 0.8939847577572129,
+      "Class III": 0.0024496461622210124
+    },
+    "unapproved_undeclared": {
+      "Class I": 0.7721739130434783,
+      "Class II": 0.20173913043478262,
+      "Class III": 0.02608695652173913
+    },
+    "unclassified": {
+      "Class I": 0.07939914163090128,
+      "Class II": 0.8004291845493562,
+      "Class III": 0.12017167381974249
+    }
+  },
+  "year_range": [
+    "2012",
+    "2026"
+  ],
+  "caveat": "Recall records describe failures that ESCAPED release and were later detected in the market. They are a biased sample of manufacturing failure: modes that batch release reliably catches are under-represented. This prior anchors the failure-mode MIX of the simulator, not its absolute failure rate, and not any trajectory.",
+  "_env": {
+    "python": "3.11.15",
+    "platform": "Linux-6.18.44-fc-v24-x86_64-with-glibc2.39",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "pandas": "3.0.2",
+    "scikit_learn": "1.8.0",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "_script": "01_profile_real_data.py"
+}

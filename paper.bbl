@@ -1,0 +1,211 @@
+\begin{thebibliography}{28}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alaa et~al.(2022)Alaa, van Breugel, Saveliev, and van~der
+  Schaar]{alaa2022faithful}
+Ahmed~M. Alaa, Boris van Breugel, Evgeny~S. Saveliev, and Mihaela van~der
+  Schaar.
+\newblock How faithful is your synthetic data? {Sample-level} metrics for
+  evaluating and auditing generative models.
+\newblock In \emph{Proceedings of the 39th International Conference on Machine
+  Learning}, volume 162 of \emph{Proceedings of Machine Learning Research},
+  pages 290--306, 2022.
+
+\bibitem[Bajpai and Reuss(1980)]{bajpai1980mechanistic}
+R.~K. Bajpai and M.~Reuss.
+\newblock A mechanistic model for penicillin production.
+\newblock \emph{Journal of Chemical Technology and Biotechnology}, 30\penalty0
+  (1):\penalty0 332--344, 1980.
+\newblock \doi{10.1002/jctb.503300140}.
+
+\bibitem[Birol et~al.(2002)Birol, {\"U}ndey, and {\c{C}}inar]{birol2002modular}
+G{\"u}lnur Birol, Cenk {\"U}ndey, and Ali {\c{C}}inar.
+\newblock A modular simulation package for fed-batch fermentation: penicillin
+  production.
+\newblock \emph{Computers \& Chemical Engineering}, 26\penalty0 (11):\penalty0
+  1553--1565, 2002.
+\newblock \doi{10.1016/S0098-1354(02)00127-8}.
+
+\bibitem[Chen et~al.(2020)Chen, Yang, Sampat, Bhalode, Ramachandran, and
+  Ierapetritou]{chen2020digital}
+Yingjie Chen, Ou~Yang, Chaitanya Sampat, Pooja Bhalode, Rohit Ramachandran, and
+  Marianthi Ierapetritou.
+\newblock Digital twins in pharmaceutical and biopharmaceutical manufacturing:
+  a literature review.
+\newblock \emph{Processes}, 8\penalty0 (9):\penalty0 1088, 2020.
+\newblock \doi{10.3390/pr8091088}.
+
+\bibitem[{Code of Federal Regulations}()]{cfr211}
+{Code of Federal Regulations}.
+\newblock 21 {CFR} part 211, current good manufacturing practice for finished
+  pharmaceuticals; {\S}211.22 responsibilities of quality control unit and
+  {\S}211.192 production record review.
+\newblock
+  \url{https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-211}.
+
+\bibitem[Esteban et~al.(2017)Esteban, Hyland, and
+  R{\"a}tsch]{esteban2017realvalued}
+Crist{\'o}bal Esteban, Stephanie~L. Hyland, and Gunnar R{\"a}tsch.
+\newblock Real-valued (medical) time series generation with recurrent
+  conditional {GANs}, 2017.
+
+\bibitem[{European Commission}(2015)]{eudralex2015annex16}
+{European Commission}.
+\newblock {EudraLex} volume 4, {EU} guidelines for good manufacturing practice
+  for medicinal products for human and veterinary use, annex 16: Certification
+  by a qualified person and batch release.
+\newblock \url{https://health.ec.europa.eu/}, 2015.
+\newblock Dated 12 October 2015; effective 15 April 2016.
+
+\bibitem[{European Commission}(2025)]{ec2025annex22}
+{European Commission}.
+\newblock {EudraLex} volume 4, good manufacturing practice guidelines, annex
+  22: Artificial intelligence.
+\newblock \url{https://health.ec.europa.eu/}, 2025.
+\newblock Draft issued for targeted stakeholder consultation. Not among the
+  adopted annexes of EudraLex Volume 4 as of September 2026.
+
+\bibitem[Goldrick(2019)]{goldrick2019indpensim}
+Stephen Goldrick.
+\newblock Data for: Modern day monitoring and control challenges outlined on an
+  industrial-scale benchmark fermentation process.
+\newblock \url{https://doi.org/10.17632/pdnjz7zz5x.2}, 2019.
+
+\bibitem[Goldrick et~al.(2015)Goldrick, {\c{S}}tefan, Lovett, Montague, and
+  Lennox]{goldrick2015development}
+Stephen Goldrick, Andrei {\c{S}}tefan, David Lovett, Gary Montague, and Barry
+  Lennox.
+\newblock The development of an industrial-scale fed-batch fermentation
+  simulation.
+\newblock \emph{Journal of Biotechnology}, 193:\penalty0 70--82, 2015.
+\newblock \doi{10.1016/j.jbiotec.2014.10.029}.
+
+\bibitem[Goldrick et~al.(2019)Goldrick, Duran-Villalobos, Jankauskas, Lovett,
+  Farid, and Lennox]{goldrick2019modern}
+Stephen Goldrick, Carlos~A. Duran-Villalobos, Karolis Jankauskas, David Lovett,
+  Suzanne~S. Farid, and Barry Lennox.
+\newblock Modern day monitoring and control challenges outlined on an
+  industrial-scale benchmark fermentation process.
+\newblock \emph{Computers \& Chemical Engineering}, 130:\penalty0 106471, 2019.
+\newblock \doi{10.1016/j.compchemeng.2019.05.037}.
+
+\bibitem[Gulrajani et~al.(2017)Gulrajani, Ahmed, Arjovsky, Dumoulin, and
+  Courville]{gulrajani2017improved}
+Ishaan Gulrajani, Faruk Ahmed, Martin Arjovsky, Vincent Dumoulin, and Aaron
+  Courville.
+\newblock Improved training of {Wasserstein} {GANs}.
+\newblock In \emph{Advances in Neural Information Processing Systems 30}, 2017.
+
+\bibitem[{International Council for Harmonisation}(2022)]{ich2022q13}
+{International Council for Harmonisation}.
+\newblock {ICH} harmonised guideline: continuous manufacturing of drug
+  substances and drug products {Q13}.
+\newblock \url{https://database.ich.org/}, 2022.
+\newblock Step 4 version, adopted 16 November 2022.
+
+\bibitem[{International Council for Harmonisation}(2023)]{ich2023q9r1}
+{International Council for Harmonisation}.
+\newblock {ICH} harmonised guideline: quality risk management {Q9(R1)}.
+\newblock \url{https://database.ich.org/}, 2023.
+\newblock Step 4 version, adopted 18 January 2023.
+
+\bibitem[{International Society for Pharmaceutical
+  Engineering}(2022)]{ispe2022gamp5}
+{International Society for Pharmaceutical Engineering}.
+\newblock \emph{{GAMP} 5: a risk-based approach to compliant {GxP} computerized
+  systems}.
+\newblock {ISPE}, second edition, 2022.
+
+\bibitem[Jordon et~al.(2022)Jordon, Szpruch, Houssiau, Bottarelli, Cherubin,
+  Maple, Cohen, and Weller]{jordon2022synthetic}
+James Jordon, Lukasz Szpruch, Florimond Houssiau, Mirko Bottarelli, Giovanni
+  Cherubin, Carsten Maple, Samuel~N. Cohen, and Adrian Weller.
+\newblock Synthetic data -- what, why and how?
+\newblock Technical report, The Royal Society and The Alan Turing Institute,
+  2022.
+
+\bibitem[Kingma and Welling(2014)]{kingma2014autoencoding}
+Diederik~P. Kingma and Max Welling.
+\newblock Auto-encoding variational {Bayes}.
+\newblock In \emph{International Conference on Learning Representations}, 2014.
+
+\bibitem[Ledoit and Wolf(2004)]{ledoit2004wellconditioned}
+Olivier Ledoit and Michael Wolf.
+\newblock A well-conditioned estimator for large-dimensional covariance
+  matrices.
+\newblock \emph{Journal of Multivariate Analysis}, 88\penalty0 (2):\penalty0
+  365--411, 2004.
+\newblock \doi{10.1016/S0047-259X(03)00096-4}.
+
+\bibitem[Lopez-Paz and Oquab(2017)]{lopezpaz2017revisiting}
+David Lopez-Paz and Maxime Oquab.
+\newblock Revisiting classifier two-sample tests.
+\newblock In \emph{International Conference on Learning Representations}, 2017.
+
+\bibitem[McCann and Johnston(2008)]{mccann2008secom}
+Michael McCann and Adrian Johnston.
+\newblock {SECOM}.
+\newblock \url{https://doi.org/10.24432/C54305}, 2008.
+
+\bibitem[Nomikos and MacGregor(1994)]{nomikos1994monitoring}
+Paul Nomikos and John~F. MacGregor.
+\newblock Monitoring batch processes using multiway principal component
+  analysis.
+\newblock \emph{AIChE Journal}, 40\penalty0 (8):\penalty0 1361--1375, 1994.
+\newblock \doi{10.1002/aic.690400809}.
+
+\bibitem[Nomikos and MacGregor(1995)]{nomikos1995multivariate}
+Paul Nomikos and John~F. MacGregor.
+\newblock Multivariate {SPC} charts for monitoring batch processes.
+\newblock \emph{Technometrics}, 37\penalty0 (1):\penalty0 41--59, 1995.
+\newblock \doi{10.1080/00401706.1995.10485888}.
+
+\bibitem[Rankin et~al.(2020)Rankin, Black, Bond, Wallace, Mulvenna, and
+  Epelde]{rankin2020reliability}
+Debbie Rankin, Michaela Black, Raymond Bond, Jonathan Wallace, Maurice
+  Mulvenna, and Gorka Epelde.
+\newblock Reliability of supervised machine learning using synthetic data in
+  health care: model to preserve privacy for data sharing.
+\newblock \emph{{JMIR} Medical Informatics}, 8\penalty0 (7):\penalty0 e18910,
+  2020.
+\newblock \doi{10.2196/18910}.
+
+\bibitem[Shokri et~al.(2017)Shokri, Stronati, Song, and
+  Shmatikov]{shokri2017membership}
+Reza Shokri, Marco Stronati, Congzheng Song, and Vitaly Shmatikov.
+\newblock Membership inference attacks against machine learning models.
+\newblock In \emph{2017 {IEEE} Symposium on Security and Privacy (SP)}, pages
+  3--18, 2017.
+
+\bibitem[Stadler et~al.(2022)Stadler, Oprisanu, and
+  Troncoso]{stadler2022synthetic}
+Theresa Stadler, Bristena Oprisanu, and Carmela Troncoso.
+\newblock Synthetic data -- anonymisation groundhog day.
+\newblock In \emph{31st {USENIX} Security Symposium}, pages 1451--1468, 2022.
+
+\bibitem[{U.S. Food and Drug Administration}(2025)]{fda2025aiguidance}
+{U.S. Food and Drug Administration}.
+\newblock Considerations for the use of artificial intelligence to support
+  regulatory decision-making for drug and biological products.
+\newblock
+  \url{https://www.fda.gov/regulatory-information/search-fda-guidance-documents/considerations-use-artificial-intelligence-support-regulatory-decision-making-drug-and-biological},
+  January 2025.
+\newblock Draft guidance for industry.
+
+\bibitem[{U.S. Food and Drug Administration}(2026)]{openfda2026enforcement}
+{U.S. Food and Drug Administration}.
+\newblock {openFDA} drug enforcement (recall) endpoint, bulk download.
+\newblock \url{https://open.fda.gov/apis/drug/enforcement/}, 2026.
+\newblock Export dated 2026-08-27; 17,899 records retrieved 2026-09-07.
+
+\bibitem[Xu et~al.(2019)Xu, Skoularidou, Cuesta-Infante, and
+  Veeramachaneni]{xu2019modeling}
+Lei Xu, Maria Skoularidou, Alfredo Cuesta-Infante, and Kalyan Veeramachaneni.
+\newblock Modeling tabular data using conditional {GAN}.
+\newblock In \emph{Advances in Neural Information Processing Systems 32}, 2019.
+
+\end{thebibliography}
