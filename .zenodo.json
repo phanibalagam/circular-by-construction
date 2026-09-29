@@ -1,0 +1,22 @@
+{
+  "title": "Circular by Construction: code, recorded results and figure sources",
+  "upload_type": "software",
+  "description": "<p>Code, recorded results and figure sources for the manuscript \"Circular by Construction: What Synthetic Process-Data Generators Can and Cannot Establish for Batch Release\", prepared for Computers and Chemical Engineering. Not peer-reviewed.</p><p>Running the numbered scripts in src/ in order reproduces every number and every figure in the manuscript from two public datasets, which are downloaded at run time and are not redistributed here: the SECOM semiconductor process dataset (UCI Machine Learning Repository, CC BY 4.0) and the openFDA drug enforcement bulk export (US federal public domain, export dated 2026-08-27). The simulated corpus is not distributed because script 02 regenerates it bit-for-bit from the master seed recorded in results/simulator_spec.json.</p><p>This work was carried out independently, on personal time and equipment, and is not connected to the author's employment. The views expressed are the author's own and do not represent the views, positions or policies of any current, former or future employer or client. No proprietary, confidential or internal data of any organization was used.</p>",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Balagam, Phani Kumar",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0007-6762-399X"
+    }
+  ],
+  "keywords": [
+    "synthetic data",
+    "process data generators",
+    "batch release",
+    "pharmaceutical manufacturing",
+    "evaluation methodology",
+    "reproducibility"
+  ],
+  "access_right": "open"
+}

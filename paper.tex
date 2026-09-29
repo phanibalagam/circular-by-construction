@@ -42,35 +42,29 @@ Can and Cannot Establish\\ for Batch Release}}
 \begin{abstract}
 \noindent
 Synthetic ``digital twins'' of batch manufacturing are almost always validated
-against the simulator that produced their own training data. We show that this
-practice supports some conclusions and not the one that matters. We build a
-two-layer open benchmark separating the ground-truth process from the learned
-twin --- a mechanistic fed-batch simulator whose failure-mode prior is anchored
-to \recallRecords{} real FDA drug-recall records, and \nMethods{} generative
-models trained on its output --- and run one identical fidelity, utility and
-privacy protocol on the simulated corpus and on a real manufacturing corpus.
-That real corpus is \emph{not} pharmaceutical: no batch records are public, so we
-use \corpusreal{} (\secomRuns{} semiconductor production runs, \secomSignals{}
-signals, \secomFailRate{}\% failing) as a structural stand-in.
-Fidelity and privacy conclusions transfer: over \agreeFidPrivN{} metrics the
-per-seed rank correlation between corpora is $\rho \in [\ciFidPrivLo{},
-\ciFidPrivHi{}]$. Downstream utility conclusions do not
+against the simulator that produced their training data. That practice
+supports some conclusions and not the one that matters. We build a two-layer
+open benchmark separating the ground-truth process from the learned
+twin---a mechanistic fed-batch simulator whose failure-mode prior is anchored to
+\recallRecords{} FDA drug-recall records, and \nMethods{} generative models
+trained on its output---and run one protocol on both corpora. No \emph{pharmaceutical} batch records are public, so
+the real corpus is \corpusreal{} (\secomRuns{} semiconductor production runs,
+\secomSignals{} signals, \secomFailRate{}\% failing), a structural stand-in.
+Fidelity and privacy conclusions transfer: over \agreeFidPrivN{} such metrics
+the per-seed rank correlation between corpora is
+$\rho \in [\ciFidPrivLo{}, \ciFidPrivHi{}]$. Utility conclusions do not
 ($\rho$~=~\ciAurocRho{} for transfer AUROC, \ciAuprcRho{} for AUPRC; both
-intervals span zero). Absolute utility does not carry over either: at
-comparable prevalence the prediction task on our simulated corpus is far easier
-than on the real one
-(train-on-real AUPRC \trtrAuprcSim{} against \trtrAuprcReal{}). We report that
-gap as a property of \emph{this} simulator, whose disposition label is a
-near-deterministic function of its own process trajectory, rather than as a
-general magnitude --- but a simulator built without real batch records gives its
-builder no way to know where on that difficulty scale it has landed, or in which
-direction. Two results bound the application. On real data, generators emit
-failing batches at \sprRatioVaeReal{}$\times$ to \sprRatioGaussianReal{}$\times$
-the true rate while aggregate fidelity scores barely register it; and on the
-simulated corpus, trajectory monitoring detects \monDetObs{} of failures leaving
-a process signature against \monDetUnobs{} of those that do not.
-We offer a benchmark and an evaluation protocol, not a release-decision system,
-and state which parts of the release decision must stay with the quality unit.
+intervals span zero). Absolute utility does not carry over either: at comparable
+prevalence the simulated task is far easier (train-on-real AUPRC
+\trtrAuprcSim{} against \trtrAuprcReal{}). That gap belongs to \emph{this}
+simulator, whose disposition label is near-deterministic in its own trajectory;
+a builder without real batch records cannot know its size or sign.
+Generators emit failing real batches at
+\sprRatioVaeReal{}$\times$ to \sprRatioGaussianReal{}$\times$ the true rate
+while aggregate fidelity barely registers it, and trajectory monitoring detects
+\monDetObs{} of failures leaving a process signature against \monDetUnobs{} of
+those that do not. We offer a benchmark and a protocol, not a release-decision
+system, and say which parts stay with the quality unit.
 \end{abstract}
 
 \vspace{0.5em}
@@ -1003,12 +997,18 @@ All results are produced by the scripts in \texttt{src/}, run in order:
 \texttt{02\_simulator.py} generates the simulated corpus,
 \texttt{03\_evaluate.py} runs the generator protocol on both corpora,
 \texttt{04\_monitoring.py} runs the trajectory experiments,
-\texttt{05\_figures.py} draws every figure and \texttt{06\_tables.py} emits
-\texttt{numbers.tex} and \texttt{tables.tex}. Every numeral in this paper is a
+\texttt{05\_figures.py} draws every figure, \texttt{06\_tables.py} emits
+\texttt{numbers.tex} and the three \texttt{table\_*.tex} files,
+\texttt{07\_agreement\_ci.py} computes the per-seed rank correlations, their
+intervals and the fidelity-versus-utility contrast, and
+\texttt{08\_verify\_manuscript.py} re-checks the manuscript against the recorded
+results. Every numeral in this paper is a
 macro defined in \texttt{numbers.tex} and read from a JSON file in
 \texttt{results/}; none is typed by hand. Seeds, library versions and the
 platform are recorded in each results file. All stochastic results use the same
-ten seeds.
+ten seeds. Claude (Anthropic) was used to assist in developing and revising the
+code in \texttt{src/}; every script was read, executed and validated by the
+author, and the recorded results files are the output of those validated runs.
 
 \section*{Data availability}
 
@@ -1026,20 +1026,19 @@ No proprietary, confidential or internal data of any organization was used.
 \section*{Code availability}
 
 All code, the recorded results files and the figure sources are available at
-\url{https://github.com/phanibalagam/circular-by-construction}. Running the seven
-scripts in order reproduces every number and every figure in this paper from the
-two public datasets named above.
+\url{https://github.com/phanibalagam/circular-by-construction} and archived at
+\url{https://doi.org/10.5281/zenodo.22855260}, which resolves to the current
+version. Running the eight numbered scripts in \texttt{src/} in order reproduces
+every number and every figure in this paper from the two public datasets named
+above.
 
-\section*{Declaration of generative AI and AI-assisted technologies}
+\section*{CRediT authorship contribution statement}
 
-During the preparation of this manuscript, the author used Claude (Anthropic) to
-support the drafting and editing of manuscript text and the development and
-revision of analysis code. The author retained sole responsibility for all final
-decisions concerning the research question, study design, data selection, outcome
-definitions, analytical methods and experimental controls; independently verified
-all sources, data and results; executed and validated the analyses; interpreted
-the findings; reviewed and edited all AI-assisted content; and assumes full
-responsibility for the accuracy and integrity of the manuscript.
+\textbf{Phani Kumar Balagam:} Conceptualization, Methodology, Software,
+Validation, Formal analysis, Investigation, Data curation, Writing --- original
+draft, Writing --- review and editing, Visualization, Project administration.
+Sole author; no funding was received and no other person contributed to this
+work.
 
 \appendix
 
@@ -1103,6 +1102,20 @@ ceiling were all set before the evaluation and not changed after results arrived
 The one budget change after that point is disclosed in \S\ref{sec:results}: the
 neural and classifier-two-sample-test budgets were cut once for runtime, before
 the reported runs, and applied uniformly thereafter.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the
+manuscript preparation process}
+
+During the preparation of this work the author used Claude (Anthropic) in order
+to support the drafting and editing of manuscript text and the development and
+revision of analysis code. After using this tool, the author reviewed and edited
+the content as needed and takes full responsibility for the content of the
+published article. The author retained sole responsibility for all final
+decisions concerning the research question, study design, data selection, outcome
+definitions, analytical methods and experimental controls; independently verified
+all sources, data and results; executed and validated the analyses; and
+interpreted the findings. No AI tool is listed as an author of this work, and
+none could be: authorship carries accountability that no tool can hold.
 
 \bibliographystyle{plainnat}
 \bibliography{references}

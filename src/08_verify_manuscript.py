@@ -7,7 +7,7 @@ break silently:
   1. Every number in numbers.tex still agrees with results/. Re-derived here from
      the JSON, independently of src/06_tables.py, so a bug in the generator shows
      up as a failure instead of being reproduced.
-  2. The programme disclaimer is present and verbatim in the manuscript, and the
+  2. The program disclaimer is present and verbatim in the manuscript, and the
      "Independent work." notice is on every .py under src/.
   3. The manuscript still compiles clean and its declared artefacts exist: every
      \\includegraphics target present, every macro used is defined, every cited
@@ -83,7 +83,7 @@ def check_disclaimer() -> None:
     tex = (ROOT / "paper.tex").read_text(encoding="utf-8")
     flat = re.sub(r"\s+", " ", tex)
     check(re.sub(r"\s+", " ", DISCLAIMER) in flat,
-          "programme disclaimer present and verbatim in paper.tex")
+          "program disclaimer present and verbatim in paper.tex")
     check("organisation" not in tex,
           "house spelling 'organization' used throughout paper.tex")
     missing = [p.name for p in sorted((ROOT / "src").glob("*.py"))
