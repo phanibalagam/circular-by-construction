@@ -1,0 +1,19 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The recorded results in `results/` and the figure sources in `figures/` are
+released under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+
+You may share and adapt them for any purpose, including commercially, provided
+you give appropriate credit and indicate if changes were made.
+
+The upstream sources are not redistributed here; the scripts in `src/` download
+them at run time:
+  - SECOM semiconductor process dataset, UCI Machine Learning Repository,
+    released under CC BY 4.0
+  - openFDA drug enforcement bulk export, US federal public domain,
+    export dated 2026-08-27  https://open.fda.gov/apis/drug/enforcement/
+The simulated corpus is not distributed either; script 02 regenerates it
+bit-for-bit from the master seed recorded in results/simulator_spec.json.
+
+The attribution requested above is for the derivation, the recorded results and
+the figure construction, not for the underlying records.

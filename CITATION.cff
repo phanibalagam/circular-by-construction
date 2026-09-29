@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "Circular by Construction: code, recorded results and figure sources"
+abstract: >-
+  Code, recorded results and figure sources for the manuscript "Circular by
+  Construction: What Synthetic Process-Data Generators Can and Cannot Establish
+  for Batch Release", prepared for Computers and Chemical Engineering. Not
+  peer-reviewed. Running the numbered scripts in src/ in order reproduces every
+  number and every figure in the manuscript from two public datasets, which are
+  downloaded at run time and are not redistributed here.
+type: software
+license: MIT
+authors:
+  - family-names: Balagam
+    given-names: "Phani Kumar"
+    orcid: "https://orcid.org/0009-0007-6762-399X"
+    affiliation: "Independent Researcher"
+repository-code: "https://github.com/phanibalagam/circular-by-construction"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22855260"
+    description: "Concept DOI, resolves to the latest version"
+keywords:
+  - synthetic data
+  - process data generators
+  - batch release
+  - pharmaceutical manufacturing
+  - evaluation methodology
+  - reproducibility
+version: "1.0.1"
+date-released: "2026-09-29"
